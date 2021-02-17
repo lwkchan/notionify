@@ -1,5 +1,5 @@
 {
-  "name": "notionify",
+	"name": "notionify",
 	"displayName": "notionify",
 	"description": "",
 	"version": "0.0.1",
@@ -10,14 +10,15 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:notionify.helloWorld"
+		"onLanguage:markdown",
+		"onCommand:notionify.addLink"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "notionify.helloWorld",
-				"title": "Hello World"
+				"command": "notionify.addLink",
+				"title": "Notionify: paste as hyperlink"
 			}
 		]
 	},
