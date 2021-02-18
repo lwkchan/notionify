@@ -1,6 +1,7 @@
 {
 	"name": "notionify",
 	"displayName": "notionify",
+	"publisher": "lwkchan",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -22,6 +23,14 @@
 			}
 		]
 	},
+	"keybindings": [
+		{
+			"command": "notionify.addLink",
+			"key": "ctrl+v",
+			"mac": "cmd+v",
+			"when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+		}
+	],
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
 		"compile": "tsc -p ./",
