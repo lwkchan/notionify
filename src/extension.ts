@@ -24,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         if (clipboardText.startsWith('http')) {
-          const selectedTextWithHyperlink = `[${selectedText}](${clipboardText})`;
+          const selectedTextWithHyperlink = `[${selectedText}](${clipboardText.trim()})`;
           replaceSelection(editor, selection, selectedTextWithHyperlink);
         }
       }
@@ -35,4 +35,4 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
