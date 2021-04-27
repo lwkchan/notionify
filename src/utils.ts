@@ -5,7 +5,5 @@ export const replaceSelection = (
   selection: vscode.Selection,
   newText: string
 ) => {
-  editor.edit((editBuilder) => {
-    editBuilder.replace(selection, newText);
-  });
+  editor.edit((editBuilder) => editBuilder.replace(selection, newText));
 };

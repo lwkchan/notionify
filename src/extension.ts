@@ -11,15 +11,19 @@ export function activate(context: vscode.ExtensionContext) {
       if (editor) {
         const clipboardText = await vscode.env.clipboard.readText();
         const selection = editor.selection;
+        const document = editor.document;
+        const selectedText = document.getText(selection);
 
-        if (selection.isEmpty || !clipboardText.startsWith('http')) {
+        if (
+          selection.isEmpty ||
+          !clipboardText.startsWith('http') ||
+          selectedText.includes('\n')
+        ) {
           replaceSelection(editor, selection, clipboardText);
           return;
         }
 
         if (clipboardText.startsWith('http')) {
-          const document = editor.document;
-          const selectedText = document.getText(selection);
           const selectedTextWithHyperlink = `[${selectedText}](${clipboardText})`;
           replaceSelection(editor, selection, selectedTextWithHyperlink);
         }
