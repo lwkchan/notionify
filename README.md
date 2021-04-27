@@ -1,5 +1,7 @@
 # notionify
 
+https://github.com/lwkchan/notionify
+
 Adds Notion-inspired shortcuts to your VSCode Markdown workflow
 
 ## To use
@@ -16,6 +18,8 @@ code --install-extension notionify-0.0.1.vsix
 ## Shortcuts
 
 - Copy any hyperlink, highlight any text, then paste the hyperlink to the text. This will automatically use the Markdown hyperlink formatting
+
+![Paste as hyperlink demonstration](images/screencap-paste-hyperlink.gif)
 
 ## Todo
 
